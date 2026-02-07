@@ -1,28 +1,11 @@
+import Hero from '@/components/sections/Hero'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
 
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex flex-col items-center justify-center text-center bg-stone-950 py-20 sm:py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-display font-bold text-white mb-6">
-            Build Better Decks with AI
-          </h1>
-          <p className="text-xl text-stone-300 mb-8 max-w-2xl mx-auto">
-            Slider is your AI copilot for PowerPoint. Create professional presentations in minutes, not hours.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="primary" size="lg">
-              Get Started Free
-            </Button>
-            <Button variant="outline" size="lg">
-              Watch Demo
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Features Section */}
       <section id="features" className="min-h-screen bg-stone-50 text-stone-900 py-20 sm:py-24 lg:py-32">
