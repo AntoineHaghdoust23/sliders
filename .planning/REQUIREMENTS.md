@@ -108,48 +108,52 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| NAV-01 | — | Pending |
-| NAV-02 | — | Pending |
-| NAV-03 | — | Pending |
-| NAV-04 | — | Pending |
-| HERO-01 | — | Pending |
-| HERO-02 | — | Pending |
-| HERO-03 | — | Pending |
-| FEAT-01 | — | Pending |
-| FEAT-02 | — | Pending |
-| FEAT-03 | — | Pending |
-| FEAT-04 | — | Pending |
-| DEMO-01 | — | Pending |
-| DEMO-02 | — | Pending |
-| DEMO-03 | — | Pending |
-| SKIL-01 | — | Pending |
-| SKIL-02 | — | Pending |
-| SKIL-03 | — | Pending |
-| UCAS-01 | — | Pending |
-| UCAS-02 | — | Pending |
-| UCAS-03 | — | Pending |
-| CTA-01 | — | Pending |
-| CTA-02 | — | Pending |
-| FOOT-01 | — | Pending |
-| FOOT-02 | — | Pending |
-| ANIM-01 | — | Pending |
-| ANIM-02 | — | Pending |
-| ANIM-03 | — | Pending |
-| ANIM-04 | — | Pending |
-| ANIM-05 | — | Pending |
-| ANIM-06 | — | Pending |
-| DSGN-01 | — | Pending |
-| DSGN-02 | — | Pending |
-| DSGN-03 | — | Pending |
-| DSGN-04 | — | Pending |
-| DSGN-05 | — | Pending |
-| DSGN-06 | — | Pending |
+| NAV-01 | Phase 2 | Pending |
+| NAV-02 | Phase 2 | Pending |
+| NAV-03 | Phase 2 | Pending |
+| NAV-04 | Phase 2 | Pending |
+| HERO-01 | Phase 2 | Pending |
+| HERO-02 | Phase 2 | Pending |
+| HERO-03 | Phase 2 | Pending |
+| FEAT-01 | Phase 3 | Pending |
+| FEAT-02 | Phase 3 | Pending |
+| FEAT-03 | Phase 3 | Pending |
+| FEAT-04 | Phase 3 | Pending |
+| DEMO-01 | Phase 4 | Pending |
+| DEMO-02 | Phase 4 | Pending |
+| DEMO-03 | Phase 4 | Pending |
+| SKIL-01 | Phase 5 | Pending |
+| SKIL-02 | Phase 5 | Pending |
+| SKIL-03 | Phase 5 | Pending |
+| UCAS-01 | Phase 5 | Pending |
+| UCAS-02 | Phase 5 | Pending |
+| UCAS-03 | Phase 5 | Pending |
+| CTA-01 | Phase 6 | Pending |
+| CTA-02 | Phase 6 | Pending |
+| FOOT-01 | Phase 6 | Pending |
+| FOOT-02 | Phase 6 | Pending |
+| ANIM-01 | Phase 1 | Pending |
+| ANIM-02 | Phase 2, Phase 4 | Pending |
+| ANIM-03 | Phase 4 | Pending |
+| ANIM-04 | Phase 3 | Pending |
+| ANIM-05 | Phase 5 | Pending |
+| ANIM-06 | Phase 1 | Pending |
+| DSGN-01 | Phase 1 | Pending |
+| DSGN-02 | Phase 1 | Pending |
+| DSGN-03 | Phase 1 | Pending |
+| DSGN-04 | Phase 1 | Pending |
+| DSGN-05 | Phase 1 | Pending |
+| DSGN-06 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 36 total
-- Mapped to phases: 0
-- Unmapped: 36
+- Mapped to phases: 36
+- Unmapped: 0
+- Coverage: 100%
+
+**Notes:**
+- ANIM-02 appears in both Phase 2 (Hero fade-in) and Phase 4 (Demo section fade-in) as it's a reusable animation pattern applied to multiple sections
 
 ---
 *Requirements defined: 2026-02-07*
-*Last updated: 2026-02-07 after initial definition*
+*Last updated: 2026-02-07 after roadmap creation with phase mappings*
