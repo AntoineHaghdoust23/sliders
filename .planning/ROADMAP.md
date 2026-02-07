@@ -51,12 +51,12 @@ Plans:
   5. Hero displays bold oversized headline with subline and PowerPoint sidebar visual
   6. Hero contains email input and "Join Waitlist" button (placeholder, no submission)
   7. Hero content fades in on initial page load
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Sticky navbar with Lenis anchor scrolling and scroll-based background transition
+- [ ] 02-02-PLAN.md — Hero section with waitlist form, product mockup visual, and fade-in animation
+- [ ] 02-03-PLAN.md — Mobile hamburger menu with accessible slide-out panel and visual verification
 
 ### Phase 3: Feature Showcase
 **Goal**: Users experience pinned scroll showcase where features swap smoothly as they scroll
@@ -127,7 +127,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-07 |
-| 2. Navigation & Hero | 0/TBD | Not started | - |
+| 2. Navigation & Hero | 0/3 | Not started | - |
 | 3. Feature Showcase | 0/TBD | Not started | - |
 | 4. Product Demo | 0/TBD | Not started | - |
 | 5. Skills & Use Cases | 0/TBD | Not started | - |
