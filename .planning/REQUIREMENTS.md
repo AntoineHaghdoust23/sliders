@@ -132,18 +132,18 @@
 | CTA-02 | Phase 6 | Pending |
 | FOOT-01 | Phase 6 | Pending |
 | FOOT-02 | Phase 6 | Pending |
-| ANIM-01 | Phase 1 | Pending |
+| ANIM-01 | Phase 1 | Complete |
 | ANIM-02 | Phase 2, Phase 4 | Pending |
 | ANIM-03 | Phase 4 | Pending |
 | ANIM-04 | Phase 3 | Pending |
 | ANIM-05 | Phase 5 | Pending |
-| ANIM-06 | Phase 1 | Pending |
-| DSGN-01 | Phase 1 | Pending |
-| DSGN-02 | Phase 1 | Pending |
-| DSGN-03 | Phase 1 | Pending |
-| DSGN-04 | Phase 1 | Pending |
-| DSGN-05 | Phase 1 | Pending |
-| DSGN-06 | Phase 1 | Pending |
+| ANIM-06 | Phase 1 | Complete |
+| DSGN-01 | Phase 1 | Complete |
+| DSGN-02 | Phase 1 | Complete |
+| DSGN-03 | Phase 1 | Complete |
+| DSGN-04 | Phase 1 | Complete |
+| DSGN-05 | Phase 1 | Complete |
+| DSGN-06 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 36 total

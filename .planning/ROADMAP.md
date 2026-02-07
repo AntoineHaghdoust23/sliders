@@ -12,7 +12,7 @@ This roadmap delivers a premium single-page marketing site with scroll-driven an
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & Design System** - Next.js setup, Tailwind config, Lenis + GSAP integration
+- [x] **Phase 1: Foundation & Design System** - Next.js setup, Tailwind config, Lenis + GSAP integration
 - [ ] **Phase 2: Navigation & Hero** - Sticky navbar and hero section with entry animations
 - [ ] **Phase 3: Feature Showcase** - Pinned scroll section with scrub-driven content transitions
 - [ ] **Phase 4: Product Demo** - Scroll-driven animated sidebar walkthrough
@@ -35,9 +35,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Project scaffold, dependencies, and PostCSS configuration
-- [ ] 01-02-PLAN.md — Design tokens (@theme) and animation infrastructure (Lenis + GSAP)
-- [ ] 01-03-PLAN.md — Section skeleton with alternating backgrounds and UI components (Button, Card)
+- [x] 01-01-PLAN.md — Project scaffold, dependencies, and PostCSS configuration
+- [x] 01-02-PLAN.md — Design tokens (@theme) and animation infrastructure (Lenis + GSAP)
+- [x] 01-03-PLAN.md — Section skeleton with alternating backgrounds and UI components (Button, Card)
 
 ### Phase 2: Navigation & Hero
 **Goal**: Users land on a compelling hero section with functional navigation that sets premium tone
@@ -126,7 +126,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Design System | 0/3 | Not started | - |
+| 1. Foundation & Design System | 3/3 | Complete | 2026-02-07 |
 | 2. Navigation & Hero | 0/TBD | Not started | - |
 | 3. Feature Showcase | 0/TBD | Not started | - |
 | 4. Product Demo | 0/TBD | Not started | - |

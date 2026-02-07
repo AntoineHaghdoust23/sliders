@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** The page must feel premium and intentional — every scroll interaction reinforces that Slider is a polished, trustworthy product worth signing up for.
-**Current focus:** Phase 1 - Foundation & Design System
+**Current focus:** Phase 2 - Navigation & Hero
 
 ## Current Position
 
