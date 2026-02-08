@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero'
 import FeatureShowcase from '@/components/sections/FeatureShowcase'
+import ProductDemo from '@/components/sections/ProductDemo'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
 
@@ -10,19 +11,7 @@ export default function Home() {
 
       <FeatureShowcase />
 
-      {/* Product Demo Section */}
-      <section id="demo" className="min-h-screen bg-stone-900 text-white py-20 sm:py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            See Slider in Action
-          </h2>
-          <div className="bg-stone-800 rounded-card p-8 text-center">
-            <p className="text-stone-400 text-lg">
-              Interactive demo placeholder — video or animated walkthrough will go here
-            </p>
-          </div>
-        </div>
-      </section>
+      <ProductDemo />
 
       {/* Skills Section */}
       <section id="skills" className="min-h-screen bg-stone-100 text-stone-900 py-20 sm:py-24 lg:py-32">
