@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 2 of 6 (Navigation & Hero)
-Plan: 02 of 03 in phase complete
+Plan: 01 of 03 in phase complete
 Status: In progress
-Last activity: 2026-02-07 — Completed 02-02-PLAN.md (Hero Section)
+Last activity: 2026-02-08 — Completed 02-01-PLAN.md (Sticky Navbar with Smooth Scroll)
 
-Progress: [████░░░░░░] 40% (4/10 plans estimated, 4 completed)
+Progress: [█████░░░░░] 50% (5/10 plans estimated, 5 completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 3.2 min
-- Total execution time: 0.21 hours
+- Total plans completed: 5
+- Average duration: 5.0 min
+- Total execution time: 0.42 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01 Foundation & Design System | 3 | 10 min | 3.3 min |
-| 02 Navigation & Hero | 1 | 3 min | 3.0 min |
+| 02 Navigation & Hero | 2 | 18 min | 9.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 3 min, 2 min, 5 min, 3 min, 3 min
-- Trend: Consistent fast execution, Phase 2 in progress
+- Last 5 plans: 2 min, 5 min, 3 min, 3 min, 15 min
+- Trend: Phase 2 plans slightly longer due to component integration complexity
 
 *Updated after each plan completion*
 
@@ -58,6 +58,9 @@ Recent decisions affecting current work:
 - CSS-only PowerPoint mockup for hero visual — Placeholder for real screenshots, no asset dependency
 - 0.15s stagger for hero animations — Balance between visual polish and LCP performance
 - gsap.matchMedia() for reduced motion support — Accessibility-first animation approach
+- Manual scrollTo calls instead of Lenis anchors:true — More control over scroll behavior from any component
+- 50px scroll threshold for navbar background transition — Avoids premature trigger on small scrolls
+- Passive scroll listeners for performance — Browser can optimize rendering pipeline
 
 ### Pending Todos
 
@@ -69,8 +72,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-07T23:48:27Z
-Stopped at: Completed 02-02-PLAN.md - Hero section with waitlist form and GSAP animations complete
+Last session: 2026-02-08T00:03:10Z
+Stopped at: Completed 02-01-PLAN.md - Sticky navbar with Lenis smooth scroll and background transition complete
 Resume file: None
 
 ## Phase Completion
@@ -88,11 +91,14 @@ Resume file: None
 - Human-approved visual quality
 
 **Phase 2 (Navigation & Hero) - IN PROGRESS**
-- 02-01: [Pending] Sticky navbar with smooth scroll
+- 02-01: Sticky navbar with smooth scroll ✅
 - 02-02: Hero section with waitlist form ✅
 - 02-03: [Pending] Polish and responsive refinement
 
 **Completed in Phase 2:**
+- Sticky navbar with transparent-to-solid background transition
+- Lenis-powered smooth scroll navigation to sections
+- useLenis hook for React context access to Lenis instance
 - Hero component with two-column responsive layout
 - PowerPoint sidebar mockup visual (CSS-only)
 - GSAP staggered fade-in animations
