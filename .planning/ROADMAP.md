@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Navigation & Hero** - Sticky navbar and hero section with entry animations
 - [x] **Phase 3: Feature Showcase** - Pinned scroll section with scrub-driven content transitions
 - [x] **Phase 4: Product Demo** - Scroll-driven animated sidebar walkthrough
-- [ ] **Phase 5: Skills & Use Cases** - Card grid sections with staggered reveals
+- [x] **Phase 5: Skills & Use Cases** - Card grid sections with staggered reveals
 - [ ] **Phase 6: Final CTA & Footer** - Closing waitlist section and footer
 
 ## Phase Details
@@ -102,8 +102,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Skills data module and SkillsSection with category-grouped grid and ScrollTrigger.batch stagger
-- [ ] 05-02-PLAN.md — Use Cases data module, UseCasesSection with dark card grid, and homepage integration
+- [x] 05-01-PLAN.md — Skills data module and SkillsSection with category-grouped grid and ScrollTrigger.batch stagger
+- [x] 05-02-PLAN.md — Use Cases data module, UseCasesSection with dark card grid, and homepage integration
 
 ### Phase 6: Final CTA & Footer
 **Goal**: Users reach compelling closing CTA and complete footer to finish page experience
@@ -130,5 +130,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Navigation & Hero | 3/3 | Complete | 2026-02-08 |
 | 3. Feature Showcase | 2/2 | Complete | 2026-02-08 |
 | 4. Product Demo | 2/2 | Complete | 2026-02-07 |
-| 5. Skills & Use Cases | 0/2 | Not started | - |
+| 5. Skills & Use Cases | 2/2 | Complete | 2026-02-08 |
 | 6. Final CTA & Footer | 0/TBD | Not started | - |

@@ -33,15 +33,15 @@
 
 ### Skills Section
 
-- [ ] **SKIL-01**: Grid of Skill preset cards grouped by category labels (e.g. Sales, Education, Startup)
-- [ ] **SKIL-02**: Cards have hover interaction (scale, shadow lift, or preview detail)
-- [ ] **SKIL-03**: Staggered reveal animation as cards scroll into view (ScrollTrigger batch)
+- [x] **SKIL-01**: Grid of Skill preset cards grouped by category labels (e.g. Sales, Education, Startup)
+- [x] **SKIL-02**: Cards have hover interaction (scale, shadow lift, or preview detail)
+- [x] **SKIL-03**: Staggered reveal animation as cards scroll into view (ScrollTrigger batch)
 
 ### Use Cases
 
-- [ ] **UCAS-01**: Use case cards showing specific scenarios where Slider helps
-- [ ] **UCAS-02**: Each card has title, description, and visual/icon
-- [ ] **UCAS-03**: Cards animate in with scroll-triggered fade-in and stagger
+- [x] **UCAS-01**: Use case cards showing specific scenarios where Slider helps
+- [x] **UCAS-02**: Each card has title, description, and visual/icon
+- [x] **UCAS-03**: Cards animate in with scroll-triggered fade-in and stagger
 
 ### Final CTA
 
@@ -59,7 +59,7 @@
 - [x] **ANIM-02**: Fade-in-on-scroll reveals for content sections
 - [x] **ANIM-03**: Parallax effects on select background elements
 - [x] **ANIM-04**: Pinned section with scrub-driven content swap (feature showcase)
-- [ ] **ANIM-05**: Staggered batch reveals for card grids (Skills, Use Cases)
+- [x] **ANIM-05**: Staggered batch reveals for card grids (Skills, Use Cases)
 - [ ] **ANIM-06**: Respects `prefers-reduced-motion` — disables/reduces animations when set
 
 ### Design System
@@ -122,12 +122,12 @@
 | DEMO-01 | Phase 4 | Complete |
 | DEMO-02 | Phase 4 | Complete |
 | DEMO-03 | Phase 4 | Complete |
-| SKIL-01 | Phase 5 | Pending |
-| SKIL-02 | Phase 5 | Pending |
-| SKIL-03 | Phase 5 | Pending |
-| UCAS-01 | Phase 5 | Pending |
-| UCAS-02 | Phase 5 | Pending |
-| UCAS-03 | Phase 5 | Pending |
+| SKIL-01 | Phase 5 | Complete |
+| SKIL-02 | Phase 5 | Complete |
+| SKIL-03 | Phase 5 | Complete |
+| UCAS-01 | Phase 5 | Complete |
+| UCAS-02 | Phase 5 | Complete |
+| UCAS-03 | Phase 5 | Complete |
 | CTA-01 | Phase 6 | Pending |
 | CTA-02 | Phase 6 | Pending |
 | FOOT-01 | Phase 6 | Pending |
@@ -136,7 +136,7 @@
 | ANIM-02 | Phase 2, Phase 4 | Complete |
 | ANIM-03 | Phase 4 | Complete |
 | ANIM-04 | Phase 3 | Complete |
-| ANIM-05 | Phase 5 | Pending |
+| ANIM-05 | Phase 5 | Complete |
 | ANIM-06 | Phase 1 | Complete |
 | DSGN-01 | Phase 1 | Complete |
 | DSGN-02 | Phase 1 | Complete |
@@ -156,4 +156,4 @@
 
 ---
 *Requirements defined: 2026-02-07*
-*Last updated: 2026-02-08 after Phase 4 completion*
+*Last updated: 2026-02-08 after Phase 5 completion*
