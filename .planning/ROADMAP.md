@@ -67,11 +67,11 @@ Plans:
   2. Each feature slide displays icon/illustration and descriptive copy
   3. Feature slides transition smoothly driven by scroll progress (GSAP ScrollTrigger scrub)
   4. Pinned section releases after final feature, allowing scroll to continue
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — FeatureSlide component and feature content data with SVG icons
+- [ ] 03-02-PLAN.md — FeatureShowcase with GSAP ScrollTrigger pin + scrub animation and page integration
 
 ### Phase 4: Product Demo
 **Goal**: Users see animated walkthrough showing Slider sidebar in action through scroll-driven storytelling
@@ -128,7 +128,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-07 |
 | 2. Navigation & Hero | 3/3 | Complete | 2026-02-08 |
-| 3. Feature Showcase | 0/TBD | Not started | - |
+| 3. Feature Showcase | 0/2 | In progress | - |
 | 4. Product Demo | 0/TBD | Not started | - |
 | 5. Skills & Use Cases | 0/TBD | Not started | - |
 | 6. Final CTA & Footer | 0/TBD | Not started | - |
