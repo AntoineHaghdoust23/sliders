@@ -9,7 +9,8 @@ const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'Demo', href: '#demo' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Use Cases', href: '#use-cases' }
+  { label: 'Use Cases', href: '#use-cases' },
+  { label: 'Pricing', href: '#pricing' }
 ]
 
 export default function Navbar() {
@@ -48,7 +49,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="relative flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link
             href="/"
@@ -58,14 +59,14 @@ export default function Navbar() {
                 scrollToTop()
               }
             }}
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity z-10"
           >
             <img src="/logo.png" alt="Slider" width={32} height={32} />
             <span className="font-bold text-xl text-white">Slider</span>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex">
+          {/* Desktop Navigation Links - Absolutely centered */}
+          <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2">
             <ul className="flex items-center gap-8">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -81,7 +82,7 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 z-10">
             <Link
               href="/login"
               className="text-stone-300 hover:text-white transition-colors duration-200"

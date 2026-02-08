@@ -15,8 +15,12 @@ export const demoSteps: DemoStep[] = [
     title: 'Open Slider Sidebar',
     description: 'Launch Slider directly in PowerPoint to get started. Your AI copilot appears in the sidebar, ready to help.',
     sidebarMessages: [
-      { text: 'I need a sales deck', sender: 'user' },
-      { text: "I'll help you build that. Which Skill should we use?", sender: 'slider' }
+      { text: 'I need a sales pitch for our new product launch', sender: 'user' },
+      { text: "I'll create a 10-slide sales pitch. What's your product?", sender: 'slider' },
+      { text: 'A project management tool for remote teams called TeamFlow', sender: 'user' },
+      { text: 'Got it! Generating your deck now...', sender: 'slider' },
+      { text: 'Building slides with your brand style...', sender: 'slider' },
+      { text: 'Done! Your sales pitch is ready. Want any changes?', sender: 'slider' },
     ],
     placeholderLabel: 'PowerPoint with Slider sidebar open',
     gridSpan: 'large'

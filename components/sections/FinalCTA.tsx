@@ -1,50 +1,55 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import Link from 'next/link'
 import Button from '@/components/ui/Button'
+import { useLenis } from '@/hooks/useLenis'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function FinalCTA() {
   const containerRef = useRef<HTMLElement>(null)
-  const [email, setEmail] = useState('')
+  const lenis = useLenis()
+
+  const scrollToPricing = () => {
+    lenis?.scrollTo('#pricing')
+  }
 
   useGSAP(
     () => {
       const mm = gsap.matchMedia()
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
-        // Staggered fade-in from below for CTA elements
-        gsap.from(['.cta-heading', '.cta-subline', '.cta-form'], {
-          autoAlpha: 0,
-          y: 40,
+        const elements = ['.cta-heading', '.cta-subline', '.cta-buttons']
+
+        // Set initial states
+        gsap.set(elements, { autoAlpha: 0, y: 40 })
+
+        gsap.to(elements, {
+          autoAlpha: 1,
+          y: 0,
           duration: 0.8,
           stagger: 0.15,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top 80%',
-            toggleActions: 'play none none none'
+            once: true,
           }
         })
       })
 
       mm.add('(prefers-reduced-motion: reduce)', () => {
-        gsap.set(['.cta-heading', '.cta-subline', '.cta-form'], { clearProps: 'all' })
+        gsap.set(['.cta-heading', '.cta-subline', '.cta-buttons'], { clearProps: 'all' })
       })
 
       return () => mm.revert()
     },
     { scope: containerRef }
   )
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Placeholder only — no backend submission
-  }
 
   return (
     <section
@@ -58,27 +63,22 @@ export default function FinalCTA() {
         </h2>
 
         <p className="cta-subline text-lg text-white/80 max-w-2xl mx-auto mb-10">
-          Join the waitlist and be first to experience AI-powered presentations inside PowerPoint.
+          Start with our free plan or go Pro for unlimited slides. No credit card required.
         </p>
 
-        <form onSubmit={handleSubmit} className="cta-form">
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your work email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              aria-label="Email address for waitlist"
-              className="flex-1 px-5 py-3.5 rounded-button bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent text-base"
-            />
-            <Button variant="secondary" size="lg" type="button">
-              Join Waitlist
+        <div className="cta-buttons flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/signup">
+            <Button variant="secondary" size="lg">
+              Get Started Free
             </Button>
-          </div>
-          <p className="text-white/60 text-sm mt-3">
-            Free during beta. No credit card required.
-          </p>
-        </form>
+          </Link>
+          <button
+            onClick={scrollToPricing}
+            className="px-8 py-3.5 rounded-full font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-colors cursor-pointer"
+          >
+            View Pricing
+          </button>
+        </div>
       </div>
     </section>
   )

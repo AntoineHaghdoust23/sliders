@@ -211,7 +211,7 @@ export default function SubscribeForm() {
           <div className="mb-4">
             <h3 className="text-lg font-bold text-white">Pro</h3>
             <div className="flex items-baseline gap-1 mt-1">
-              <span className="text-3xl font-bold text-white">$5</span>
+              <span className="text-3xl font-bold text-white">$4.99</span>
               <span className="text-stone-500">/month</span>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function SubscribeForm() {
           ? 'Redirecting to checkout...'
           : selectedPlan === 'free'
             ? 'Continue with Free'
-            : 'Subscribe to Pro — $5/mo'}
+            : 'Subscribe to Pro — $4.99/mo'}
       </button>
       <p className="text-stone-500 text-xs text-center mt-3">
         {selectedPlan === 'pro'

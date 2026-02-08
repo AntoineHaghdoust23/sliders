@@ -18,25 +18,29 @@ export default function UseCasesSection() {
       const mm = gsap.matchMedia()
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
+        // Set initial states
+        gsap.set(headingRef.current, { autoAlpha: 0, y: 40 })
+        gsap.set('.use-case-card', { autoAlpha: 0, y: 60 })
+
         // Heading fade-in
-        gsap.from(headingRef.current, {
-          autoAlpha: 0,
-          y: 40,
+        gsap.to(headingRef.current, {
+          autoAlpha: 1,
+          y: 0,
           duration: 0.8,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: headingRef.current,
             start: 'top 85%',
-            toggleActions: 'play none none none'
+            once: true,
           }
         })
 
         // Batch stagger for use case cards
         ScrollTrigger.batch('.use-case-card', {
           onEnter: (elements) => {
-            gsap.from(elements, {
-              autoAlpha: 0,
-              y: 60,
+            gsap.to(elements, {
+              autoAlpha: 1,
+              y: 0,
               duration: 0.8,
               stagger: 0.15,
               ease: 'power2.out'
@@ -48,7 +52,7 @@ export default function UseCasesSection() {
       })
 
       mm.add('(prefers-reduced-motion: reduce)', () => {
-        gsap.set('.use-case-card', { clearProps: 'all' })
+        gsap.set([headingRef.current, '.use-case-card'], { clearProps: 'all' })
       })
 
       return () => mm.revert()

@@ -25,33 +25,41 @@ export default function ProductDemo() {
     const mm = gsap.matchMedia()
 
     mm.add("(prefers-reduced-motion: no-preference)", () => {
+      // Set initial states
+      gsap.set(headingRef.current, { autoAlpha: 0, y: 40 })
+      gsap.set('.demo-card', { autoAlpha: 0, y: 60, scale: 0.95 })
+
       // 1. Heading fade-in
-      gsap.from(headingRef.current, {
-        autoAlpha: 0,
-        y: 40,
+      gsap.to(headingRef.current, {
+        autoAlpha: 1,
+        y: 0,
         duration: 0.8,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: headingRef.current,
           start: 'top 85%',
-          toggleActions: 'play none none none',
+          once: true,
         }
       })
 
       // 2. Sidebar walkthrough timeline (pinned, scrub)
       const chatBubbles = containerRef.current?.querySelectorAll('.demo-chat-bubble')
+      const slideContent = containerRef.current?.querySelector('.demo-slide-content')
+      const slideThumbnails = containerRef.current?.querySelectorAll('.demo-slide-thumb')
 
       if (walkthroughRef.current && chatBubbles && chatBubbles.length > 0) {
-        // Initially hide all chat bubbles
+        // Initially hide all chat bubbles and slide content
         gsap.set(chatBubbles, { autoAlpha: 0, y: 20 })
+        if (slideContent) gsap.set(slideContent, { autoAlpha: 0 })
+        if (slideThumbnails) gsap.set(slideThumbnails, { autoAlpha: 0.3 })
 
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: walkthroughRef.current,
             pin: true,
             scrub: 0.5,
-            start: 'top 20%',
-            end: () => `+=${chatBubbles.length * 80}vh`,
+            start: 'top 10%',
+            end: () => `+=${chatBubbles.length * 50}vh`,
             invalidateOnRefresh: true,
             pinSpacing: true,
           }
@@ -65,9 +73,41 @@ export default function ProductDemo() {
             duration: 1,
             ease: 'power2.out',
           })
+
+          // At message 4 (index 3), start showing the slide content
+          if (index === 3 && slideContent) {
+            tl.to(slideContent, {
+              autoAlpha: 1,
+              duration: 0.5,
+              ease: 'power2.out',
+            }, '<')
+            // Light up first thumbnail
+            if (slideThumbnails && slideThumbnails[0]) {
+              tl.to(slideThumbnails[0], { autoAlpha: 1, duration: 0.3 }, '<')
+            }
+          }
+
+          // At message 5 (index 4), light up more thumbnails
+          if (index === 4 && slideThumbnails && slideThumbnails.length > 1) {
+            tl.to([slideThumbnails[1], slideThumbnails[2]], {
+              autoAlpha: 1,
+              duration: 0.3,
+              stagger: 0.1,
+            }, '<0.3')
+          }
+
+          // At message 6 (index 5), light up remaining thumbnails
+          if (index === 5 && slideThumbnails && slideThumbnails.length > 3) {
+            tl.to([slideThumbnails[3], slideThumbnails[4]], {
+              autoAlpha: 1,
+              duration: 0.3,
+              stagger: 0.1,
+            }, '<0.3')
+          }
+
           // Add spacer between bubbles
           if (index < chatBubbles.length - 1) {
-            tl.to({}, { duration: 0.5 })
+            tl.to({}, { duration: 0.4 })
           }
         })
       }
@@ -75,10 +115,10 @@ export default function ProductDemo() {
       // 3. Bento card staggered reveal
       ScrollTrigger.batch('.demo-card', {
         onEnter: (elements) => {
-          gsap.from(elements, {
-            autoAlpha: 0,
-            y: 60,
-            scale: 0.95,
+          gsap.to(elements, {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
             duration: 0.8,
             stagger: 0.15,
             ease: 'power2.out',
@@ -142,41 +182,108 @@ export default function ProductDemo() {
             <DemoFrame
               data-step="sidebar-walkthrough"
               sidebarContent={
-                <div ref={sidebarRef} className="space-y-3">
-                  {/* Slider branding */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-6 h-6 rounded-full bg-burnt-orange flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">S</span>
+                <div ref={sidebarRef} className="flex flex-col h-full">
+                  {/* Header */}
+                  <div className="p-3 border-b border-stone-200">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <img src="/logo.png" alt="Slider" width={28} height={28} className="rounded" />
+                        <div>
+                          <p className="text-stone-900 text-sm font-semibold">Slider</p>
+                          <p className="text-stone-500 text-[10px]">Slide creation made simple</p>
+                        </div>
+                      </div>
+                      <div className="w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-400">
+                          <circle cx="12" cy="12" r="10" />
+                          <circle cx="12" cy="10" r="3" />
+                          <path d="M6.168 18.849A4 4 0 0110 16h4a4 4 0 013.834 2.855" />
+                        </svg>
+                      </div>
                     </div>
-                    <span className="text-white text-sm font-medium">Slider</span>
                   </div>
 
-                  {/* Chat bubbles */}
-                  {walkthroughStep.sidebarMessages.map((msg, i) => (
-                    <div
-                      key={i}
-                      className={`demo-chat-bubble rounded-lg p-2.5 text-xs ${
-                        msg.sender === 'user'
-                          ? 'bg-stone-800 text-stone-400'
-                          : 'bg-burnt-orange/20 text-burnt-orange border border-burnt-orange/30'
-                      }`}
-                      data-bubble-index={i}
-                    >
-                      {msg.text}
+                  {/* Chat area */}
+                  <div className="flex-1 p-3 space-y-2 overflow-y-auto">
+                    {walkthroughStep.sidebarMessages.map((msg, i) => (
+                      <div
+                        key={i}
+                        className={`demo-chat-bubble rounded-xl p-3 text-xs opacity-0 invisible ${
+                          msg.sender === 'user'
+                            ? 'bg-burnt-orange text-white ml-4'
+                            : 'bg-stone-100 text-stone-700 mr-4'
+                        }`}
+                        data-bubble-index={i}
+                      >
+                        {msg.text}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Input area */}
+                  <div className="p-3 border-t border-stone-200">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center flex-shrink-0">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-400">
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      </div>
+                      <div className="flex-1 bg-stone-100 rounded-lg px-3 py-2">
+                        <span className="text-stone-400 text-[10px]">Start a new conversation...</span>
+                      </div>
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-300">
+                          <path d="M22 2L11 13" />
+                          <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                        </svg>
+                      </div>
                     </div>
-                  ))}
+                    <p className="text-stone-400 text-[10px] text-center mt-2">Slide 1 / 5</p>
+                  </div>
                 </div>
               }
             >
-              {/* Main slide placeholder */}
-              <div className="w-full h-full flex items-center justify-center p-6">
-                <div className="aspect-[16/10] w-full max-w-md">
-                  <div className="text-center space-y-3">
-                    <div className="w-32 h-3 bg-stone-600 rounded mx-auto"></div>
-                    <div className="w-48 h-2 bg-stone-700 rounded mx-auto"></div>
-                    <div className="w-40 h-2 bg-stone-700 rounded mx-auto"></div>
-                    <div className="mt-6 w-24 h-16 bg-stone-700 rounded mx-auto"></div>
+              {/* PowerPoint-style layout with slide thumbnails */}
+              <div className="w-full h-full flex">
+                {/* Slide thumbnails panel */}
+                <div className="w-24 lg:w-28 bg-stone-200 border-r border-stone-300 p-2 space-y-2 flex-shrink-0">
+                  {[
+                    { num: 1, title: 'Introduction to TeamFlow', hasContent: true },
+                    { num: 2, title: 'The Problem', hasContent: true },
+                    { num: 3, title: 'Our Solution', hasContent: true },
+                    { num: 4, title: 'Key Features', hasContent: true },
+                    { num: 5, title: 'Pricing & CTA', hasContent: true },
+                  ].map((slide) => (
+                    <div key={slide.num} className="flex items-start gap-1">
+                      <span className="text-[10px] text-stone-500 mt-1">{slide.num}</span>
+                      <div
+                        className={`demo-slide-thumb flex-1 aspect-[16/10] bg-amber-50 rounded border-2 opacity-30 ${
+                          slide.num === 1 ? 'border-burnt-orange' : 'border-stone-300'
+                        } p-1 overflow-hidden`}
+                      >
+                        <p className="text-burnt-orange text-[6px] font-medium truncate">{slide.title}</p>
+                        <div className="mt-0.5 space-y-0.5">
+                          <div className="w-full h-0.5 bg-stone-300 rounded"></div>
+                          <div className="w-3/4 h-0.5 bg-stone-300 rounded"></div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Main slide area */}
+                <div className="flex-1 p-4 lg:p-6 flex flex-col bg-stone-400">
+                  <div className="demo-slide-content flex-1 bg-amber-50 rounded shadow-lg p-4 lg:p-6 flex flex-col opacity-0 invisible">
+                    {/* Title slide content */}
+                    <h3 className="text-burnt-orange font-semibold text-base lg:text-xl mb-3">Introduction to TeamFlow</h3>
+                    <div className="space-y-2 text-stone-700 text-[10px] lg:text-xs leading-relaxed">
+                      <p>TeamFlow has revolutionized how remote teams collaborate, serving thousands of companies worldwide.</p>
+                      <p>This presentation will explore our key features, competitive advantages, and why TeamFlow is the right choice for your organization.</p>
+                    </div>
                   </div>
+                  {/* Notes area */}
+                  <div className="mt-2 text-stone-500 text-[10px]">Click to add notes</div>
                 </div>
               </div>
             </DemoFrame>
