@@ -36,14 +36,14 @@ export default function LoginForm() {
   return (
     <div className="w-full max-w-md">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-white mb-2">Welcome back</h1>
-        <p className="text-stone-400">Sign in to your Slider account</p>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white mb-2">Welcome back</h1>
+        <p className="text-stone-600 dark:text-stone-400">Sign in to your Slider account</p>
       </div>
 
-      <div className="bg-stone-900 border border-stone-800 rounded-2xl p-8">
+      <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-8">
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-stone-300 mb-1.5">
+            <label htmlFor="email" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1.5">
               Email
             </label>
             <input
@@ -53,12 +53,12 @@ export default function LoginForm() {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="you@example.com"
-              className="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-xl text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-shadow"
+              className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-800 border border-stone-300 dark:border-stone-700 rounded-xl text-stone-900 dark:text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-shadow"
             />
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-stone-300 mb-1.5">
+            <label htmlFor="password" className="block text-sm font-medium text-stone-700 dark:text-stone-300 mb-1.5">
               Password
             </label>
             <input
@@ -68,7 +68,7 @@ export default function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="Your password"
-              className="w-full px-4 py-3 bg-stone-800 border border-stone-700 rounded-xl text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-shadow"
+              className="w-full px-4 py-3 bg-stone-50 dark:bg-stone-800 border border-stone-300 dark:border-stone-700 rounded-xl text-stone-900 dark:text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-burnt-orange focus:border-transparent transition-shadow"
             />
           </div>
 

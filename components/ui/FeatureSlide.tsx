@@ -14,12 +14,12 @@ export function FeatureSlide({ icon, title, description }: FeatureSlideProps) {
         </div>
 
         {/* Title */}
-        <h3 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
+        <h3 className="text-3xl lg:text-5xl font-bold text-stone-900 dark:text-white leading-tight">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-lg lg:text-xl text-stone-300 max-w-xl mx-auto">
+        <p className="text-lg lg:text-xl text-stone-600 dark:text-stone-400 max-w-xl mx-auto">
           {description}
         </p>
       </div>

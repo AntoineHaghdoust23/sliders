@@ -137,11 +137,11 @@ export default function ProductDemo() {
     <section
       ref={containerRef}
       id="demo"
-      className="bg-stone-900 text-white relative overflow-hidden"
+      className="bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-white relative overflow-hidden"
     >
       {/* Parallax background shapes */}
-      <div className="parallax-shape w-64 h-64 bg-burnt-orange/5 rounded-full blur-3xl absolute -top-32 -left-16" />
-      <div className="parallax-shape w-48 h-48 bg-teal/5 rounded-full blur-3xl absolute bottom-0 right-0" />
+      <div className="parallax-shape w-64 h-64 bg-burnt-orange/10 rounded-full blur-3xl absolute -top-32 -left-16" />
+      <div className="parallax-shape w-48 h-48 bg-teal/10 rounded-full blur-3xl absolute bottom-0 right-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32 relative z-10">
         {/* Full-width pinned walkthrough with heading */}
@@ -151,11 +151,11 @@ export default function ProductDemo() {
             <p className="text-burnt-orange uppercase tracking-wide text-sm font-medium mb-3">
               See It In Action
             </p>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-stone-900 dark:text-white">
               Watch Slider Build Your Deck
             </h2>
-            <p className="text-stone-300 text-lg max-w-2xl mx-auto">
-              From opening the sidebar to final polish, see how Slider transforms your presentation workflow with AI-powered Skills.
+            <p className="text-stone-600 dark:text-stone-400 text-lg max-w-2xl mx-auto">
+              From opening the sidebar to final polish, see how Slider transforms your presentation workflow with AI-powered Styles.
             </p>
           </div>
 

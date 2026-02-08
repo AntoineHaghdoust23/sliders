@@ -67,7 +67,7 @@ export default function FeatureShowcase() {
     <section
       ref={containerRef}
       id="features"
-      className="h-screen overflow-hidden bg-stone-950"
+      className="h-screen overflow-hidden bg-white dark:bg-stone-950"
     >
       <div
         ref={slidesRef}

@@ -73,7 +73,7 @@ export default function MobileMenu({ isOpen, onClose, links, user }: MobileMenuP
 
       {/* Slide-out Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] max-w-[80vw] bg-stone-950 z-50 shadow-2xl transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[280px] max-w-[80vw] bg-white dark:bg-stone-900 z-50 shadow-2xl transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -85,7 +85,7 @@ export default function MobileMenu({ isOpen, onClose, links, user }: MobileMenuP
                 <li key={link.href}>
                   <button
                     onClick={() => handleLinkClick(link.href)}
-                    className="block w-full text-left py-3 text-lg text-stone-300 hover:text-white border-b border-stone-800 transition-colors"
+                    className="block w-full text-left py-3 text-lg text-stone-700 hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100 border-b border-stone-200 dark:border-stone-700 transition-colors"
                   >
                     {link.label}
                   </button>
@@ -100,14 +100,14 @@ export default function MobileMenu({ isOpen, onClose, links, user }: MobileMenuP
               <Link
                 href="/profile"
                 onClick={onClose}
-                className="flex items-center gap-3 py-3 text-stone-300 hover:text-white transition-colors"
+                className="flex items-center gap-3 py-3 text-stone-700 hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100 transition-colors"
               >
                 <div className="w-10 h-10 rounded-full bg-burnt-orange flex items-center justify-center text-white font-semibold">
                   {getUserInitials()}
                 </div>
                 <div>
-                  <p className="text-white font-medium">My Profile</p>
-                  <p className="text-stone-500 text-sm truncate max-w-[180px]">{user.email}</p>
+                  <p className="text-stone-900 dark:text-stone-100 font-medium">My Profile</p>
+                  <p className="text-stone-500 dark:text-stone-400 text-sm truncate max-w-[180px]">{user.email}</p>
                 </div>
               </Link>
             ) : (
@@ -120,7 +120,7 @@ export default function MobileMenu({ isOpen, onClose, links, user }: MobileMenuP
                 <Link
                   href="/login"
                   onClick={onClose}
-                  className="block w-full text-center py-3 text-stone-300 hover:text-white transition-colors"
+                  className="block w-full text-center py-3 text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors"
                 >
                   Sign in
                 </Link>

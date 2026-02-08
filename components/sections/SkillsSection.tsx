@@ -64,12 +64,12 @@ export default function SkillsSection() {
     <section
       ref={containerRef}
       id="styles"
-      className="min-h-screen bg-stone-100 text-stone-900 py-20 sm:py-24 lg:py-32"
+      className="min-h-screen bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-white py-20 sm:py-24 lg:py-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headingRef} className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">AI-Powered Styles</h2>
-          <p className="text-stone-600 text-lg max-w-2xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-stone-900 dark:text-white">AI-Powered Styles</h2>
+          <p className="text-stone-600 dark:text-stone-400 text-lg max-w-2xl mx-auto">
             Automatically detected from your description, or manually choose the perfect style for your presentation.
           </p>
         </div>
@@ -99,10 +99,10 @@ export default function SkillsSection() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-stone-900 mb-2">
+                      <h4 className="text-lg font-semibold text-stone-900 dark:text-white mb-2">
                         {skill.title}
                       </h4>
-                      <p className="text-stone-600 text-sm leading-relaxed">
+                      <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
                         {skill.description}
                       </p>
                     </div>

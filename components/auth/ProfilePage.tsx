@@ -61,11 +61,11 @@ export default function ProfilePage() {
   if (loading) {
     return (
       <div className="w-full max-w-md">
-        <div className="bg-stone-900 border border-stone-800 rounded-2xl p-8">
+        <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-8">
           <div className="animate-pulse space-y-4">
-            <div className="w-20 h-20 rounded-full bg-stone-800 mx-auto" />
-            <div className="h-6 bg-stone-800 rounded w-3/4 mx-auto" />
-            <div className="h-4 bg-stone-800 rounded w-1/2 mx-auto" />
+            <div className="w-20 h-20 rounded-full bg-stone-200 dark:bg-stone-800 mx-auto" />
+            <div className="h-6 bg-stone-200 dark:bg-stone-800 rounded w-3/4 mx-auto" />
+            <div className="h-4 bg-stone-200 dark:bg-stone-800 rounded w-1/2 mx-auto" />
           </div>
         </div>
       </div>
@@ -75,28 +75,28 @@ export default function ProfilePage() {
   return (
     <div className="w-full max-w-md">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-white mb-2">Your Profile</h1>
-        <p className="text-stone-400">Manage your account and subscription</p>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white mb-2">Your Profile</h1>
+        <p className="text-stone-600 dark:text-stone-400">Manage your account and subscription</p>
       </div>
 
-      <div className="bg-stone-900 border border-stone-800 rounded-2xl p-8">
+      <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-8">
         {/* Avatar and Email */}
         <div className="text-center mb-8">
           <div className="w-20 h-20 rounded-full bg-burnt-orange flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
             {getUserInitials()}
           </div>
-          <p className="text-white font-medium">{user?.email}</p>
+          <p className="text-stone-900 dark:text-white font-medium">{user?.email}</p>
           <p className="text-stone-500 text-sm mt-1">
             Member since {user?.created_at ? new Date(user.created_at).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : 'N/A'}
           </p>
         </div>
 
         {/* Subscription Status */}
-        <div className="bg-stone-800 rounded-xl p-4 mb-6">
+        <div className="bg-stone-100 dark:bg-stone-800 rounded-xl p-4 mb-6">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-stone-400 text-sm">Current Plan</p>
-              <p className="text-white font-semibold text-lg">
+              <p className="text-stone-600 dark:text-stone-400 text-sm">Current Plan</p>
+              <p className="text-stone-900 dark:text-white font-semibold text-lg">
                 {isProSubscriber ? 'Pro' : 'Free'}
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function ProfilePage() {
               className={`text-sm px-3 py-1 rounded-full ${
                 isProSubscriber
                   ? 'bg-success/20 text-success'
-                  : 'bg-stone-700 text-stone-400'
+                  : 'bg-stone-200 dark:bg-stone-700 text-stone-600 dark:text-stone-400'
               }`}
             >
               {isProSubscriber ? 'Active' : 'Free Tier'}
@@ -112,8 +112,8 @@ export default function ProfilePage() {
           </div>
 
           {isProSubscriber ? (
-            <div className="mt-4 pt-4 border-t border-stone-700">
-              <ul className="space-y-2 text-sm text-stone-400">
+            <div className="mt-4 pt-4 border-t border-stone-200 dark:border-stone-700">
+              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
                 <li className="flex items-center gap-2">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-burnt-orange">
                     <polyline points="20 6 9 17 4 12" />
@@ -124,7 +124,7 @@ export default function ProfilePage() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-burnt-orange">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
-                  All Skills unlocked
+                  All Styles unlocked
                 </li>
                 <li className="flex items-center gap-2">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-burnt-orange">
@@ -135,8 +135,8 @@ export default function ProfilePage() {
               </ul>
             </div>
           ) : (
-            <div className="mt-4 pt-4 border-t border-stone-700">
-              <ul className="space-y-2 text-sm text-stone-400">
+            <div className="mt-4 pt-4 border-t border-stone-200 dark:border-stone-700">
+              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
                 <li className="flex items-center gap-2">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-500">
                     <polyline points="20 6 9 17 4 12" />
@@ -147,7 +147,7 @@ export default function ProfilePage() {
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-500">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
-                  Basic Skills
+                  Basic Styles
                 </li>
               </ul>
             </div>
@@ -168,7 +168,7 @@ export default function ProfilePage() {
           <button
             onClick={handleSignOut}
             disabled={signingOut}
-            className="w-full px-6 py-3 bg-stone-800 hover:bg-stone-700 text-white font-medium rounded-full transition-colors disabled:opacity-50 cursor-pointer"
+            className="w-full px-6 py-3 bg-stone-200 dark:bg-stone-800 hover:bg-stone-300 dark:hover:bg-stone-700 text-stone-900 dark:text-white font-medium rounded-full transition-colors disabled:opacity-50 cursor-pointer"
           >
             {signingOut ? 'Signing out...' : 'Sign out'}
           </button>

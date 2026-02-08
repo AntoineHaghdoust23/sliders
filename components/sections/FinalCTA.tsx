@@ -68,9 +68,9 @@ export default function FinalCTA() {
 
         <div className="cta-buttons flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/signup">
-            <Button variant="secondary" size="lg">
+            <button className="px-8 py-4 text-lg rounded-full font-semibold bg-stone-900 text-white hover:bg-stone-800 transition-colors cursor-pointer">
               Get Started Free
-            </Button>
+            </button>
           </Link>
           <button
             onClick={scrollToPricing}

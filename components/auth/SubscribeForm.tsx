@@ -74,14 +74,14 @@ export default function SubscribeForm() {
   if (success) {
     return (
       <div className="w-full max-w-md text-center">
-        <div className="bg-stone-900 border border-stone-800 rounded-2xl p-8">
+        <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-8">
           <div className="w-16 h-16 bg-success/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-success">
               <polyline points="20 6 9 17 4 12" />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2">You&apos;re all set!</h1>
-          <p className="text-stone-400 mb-6">
+          <h1 className="text-2xl font-bold text-stone-900 dark:text-white mb-2">You&apos;re all set!</h1>
+          <p className="text-stone-600 dark:text-stone-400 mb-6">
             Your subscription is active. You can now use Slider in PowerPoint with your account.
           </p>
           <Link
@@ -98,9 +98,9 @@ export default function SubscribeForm() {
   if (canceled) {
     return (
       <div className="w-full max-w-md text-center">
-        <div className="bg-stone-900 border border-stone-800 rounded-2xl p-8">
-          <h1 className="text-2xl font-bold text-white mb-2">Payment canceled</h1>
-          <p className="text-stone-400 mb-6">
+        <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-8">
+          <h1 className="text-2xl font-bold text-stone-900 dark:text-white mb-2">Payment canceled</h1>
+          <p className="text-stone-600 dark:text-stone-400 mb-6">
             No worries — you can subscribe whenever you&apos;re ready.
           </p>
           <button
@@ -120,14 +120,14 @@ export default function SubscribeForm() {
     return (
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">Your Subscription</h1>
-          <p className="text-stone-400">
+          <h1 className="text-3xl font-bold text-stone-900 dark:text-white mb-2">Your Subscription</h1>
+          <p className="text-stone-600 dark:text-stone-400">
             Your subscription is active. Use the same account in the PowerPoint extension.
           </p>
         </div>
-        <div className="bg-stone-900 border border-stone-800 rounded-2xl p-8 text-center">
+        <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-8 text-center">
           <span className="text-sm text-success bg-success/10 px-3 py-1 rounded-full">Active</span>
-          <p className="text-stone-400 text-sm mt-4">
+          <p className="text-stone-600 dark:text-stone-400 text-sm mt-4">
             Signed in as {user?.email}
           </p>
           <Link
@@ -144,8 +144,8 @@ export default function SubscribeForm() {
   return (
     <div className="w-full max-w-2xl">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-white mb-2">Choose your plan</h1>
-        <p className="text-stone-400">Select a plan to get started with Slider</p>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white mb-2">Choose your plan</h1>
+        <p className="text-stone-600 dark:text-stone-400">Select a plan to get started with Slider</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -155,18 +155,18 @@ export default function SubscribeForm() {
           onClick={() => setSelectedPlan('free')}
           className={`relative text-left p-6 rounded-2xl border-2 transition-all cursor-pointer ${
             selectedPlan === 'free'
-              ? 'border-burnt-orange bg-stone-900'
-              : 'border-stone-700 bg-stone-900/50 hover:border-stone-600'
+              ? 'border-burnt-orange bg-white dark:bg-stone-900'
+              : 'border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50 hover:border-stone-400 dark:hover:border-stone-600'
           }`}
         >
           <div className="mb-4">
-            <h3 className="text-lg font-bold text-white">Free</h3>
+            <h3 className="text-lg font-bold text-stone-900 dark:text-white">Free</h3>
             <div className="flex items-baseline gap-1 mt-1">
-              <span className="text-3xl font-bold text-white">$0</span>
+              <span className="text-3xl font-bold text-stone-900 dark:text-white">$0</span>
               <span className="text-stone-500">/month</span>
             </div>
           </div>
-          <ul className="space-y-2.5 text-sm text-stone-400">
+          <ul className="space-y-2.5 text-sm text-stone-600 dark:text-stone-400">
             <li className="flex items-start gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-500 mt-0.5 shrink-0">
                 <polyline points="20 6 9 17 4 12" />
@@ -177,7 +177,7 @@ export default function SubscribeForm() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-500 mt-0.5 shrink-0">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
-              Basic Skills
+              Basic Styles
             </li>
             <li className="flex items-start gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-stone-500 mt-0.5 shrink-0">
@@ -201,21 +201,21 @@ export default function SubscribeForm() {
           onClick={() => setSelectedPlan('pro')}
           className={`relative text-left p-6 rounded-2xl border-2 transition-all cursor-pointer ${
             selectedPlan === 'pro'
-              ? 'border-burnt-orange bg-stone-900'
-              : 'border-stone-700 bg-stone-900/50 hover:border-stone-600'
+              ? 'border-burnt-orange bg-white dark:bg-stone-900'
+              : 'border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-900/50 hover:border-stone-400 dark:hover:border-stone-600'
           }`}
         >
           <span className="absolute -top-3 left-4 text-xs font-semibold bg-burnt-orange text-white px-3 py-1 rounded-full">
             Popular
           </span>
           <div className="mb-4">
-            <h3 className="text-lg font-bold text-white">Pro</h3>
+            <h3 className="text-lg font-bold text-stone-900 dark:text-white">Pro</h3>
             <div className="flex items-baseline gap-1 mt-1">
-              <span className="text-3xl font-bold text-white">$4.99</span>
+              <span className="text-3xl font-bold text-stone-900 dark:text-white">$4.99</span>
               <span className="text-stone-500">/month</span>
             </div>
           </div>
-          <ul className="space-y-2.5 text-sm text-stone-400">
+          <ul className="space-y-2.5 text-sm text-stone-600 dark:text-stone-400">
             <li className="flex items-start gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-burnt-orange mt-0.5 shrink-0">
                 <polyline points="20 6 9 17 4 12" />
@@ -226,7 +226,7 @@ export default function SubscribeForm() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-burnt-orange mt-0.5 shrink-0">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
-              All Skills
+              All Styles
             </li>
             <li className="flex items-start gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-burnt-orange mt-0.5 shrink-0">

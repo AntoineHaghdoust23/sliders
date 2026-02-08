@@ -94,15 +94,15 @@ export default function PricingSection() {
     <section
       ref={sectionRef}
       id="pricing"
-      className="bg-stone-100 py-24 sm:py-32"
+      className="bg-stone-100 dark:bg-stone-900 py-24 sm:py-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="pricing-header text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 dark:text-white mb-4">
             Simple, transparent pricing
           </h2>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+          <p className="text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
             Start free and upgrade when you need more. No hidden fees, cancel anytime.
           </p>
         </div>
@@ -114,8 +114,8 @@ export default function PricingSection() {
               key={plan.name}
               className={`pricing-card relative rounded-2xl p-8 ${
                 plan.highlighted
-                  ? 'bg-stone-900 text-white ring-4 ring-burnt-orange'
-                  : 'bg-white text-stone-900 border border-stone-200'
+                  ? 'bg-stone-900 dark:bg-stone-800 text-white ring-4 ring-burnt-orange'
+                  : 'bg-white dark:bg-stone-800 text-stone-900 dark:text-white border border-stone-200 dark:border-stone-700'
               }`}
             >
               {plan.badge && (
@@ -125,22 +125,22 @@ export default function PricingSection() {
               )}
 
               {/* Plan Name */}
-              <h3 className={`text-xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-stone-900'}`}>
+              <h3 className={`text-xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-stone-900 dark:text-white'}`}>
                 {plan.name}
               </h3>
 
               {/* Price */}
               <div className="flex items-baseline gap-1 mb-2">
-                <span className={`text-5xl font-bold tracking-tight ${plan.highlighted ? 'text-white' : 'text-stone-900'}`}>
+                <span className={`text-5xl font-bold tracking-tight ${plan.highlighted ? 'text-white' : 'text-stone-900 dark:text-white'}`}>
                   {plan.price}
                 </span>
-                <span className={plan.highlighted ? 'text-stone-400' : 'text-stone-500'}>
+                <span className={plan.highlighted ? 'text-stone-400' : 'text-stone-500 dark:text-stone-400'}>
                   {plan.period}
                 </span>
               </div>
 
               {/* Description */}
-              <p className={`text-sm mb-8 ${plan.highlighted ? 'text-stone-400' : 'text-stone-600'}`}>
+              <p className={`text-sm mb-8 ${plan.highlighted ? 'text-stone-400' : 'text-stone-600 dark:text-stone-400'}`}>
                 {plan.description}
               </p>
 
@@ -171,7 +171,7 @@ export default function PricingSection() {
                     >
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    <span className={plan.highlighted ? 'text-stone-300' : 'text-stone-600'}>
+                    <span className={plan.highlighted ? 'text-stone-300' : 'text-stone-600 dark:text-stone-400'}>
                       {feature}
                     </span>
                   </li>

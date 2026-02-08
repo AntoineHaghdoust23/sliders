@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useLenis } from '@/hooks/useLenis'
+import { useTheme } from '@/components/providers/ThemeProvider'
 import Button from '@/components/ui/Button'
 import MobileMenu from '@/components/layout/MobileMenu'
 import { createClient } from '@/lib/supabase/client'
@@ -23,6 +24,7 @@ export default function Navbar() {
   const [loading, setLoading] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const lenis = useLenis()
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,7 +92,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-stone-950/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-white/95 dark:bg-stone-900/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
       } ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,7 +117,7 @@ export default function Navbar() {
               height={32}
               className={`transition-all duration-300 ${isScrolled ? 'w-6 h-6' : 'w-8 h-8'}`}
             />
-            <span className={`font-bold text-white transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl'}`}>
+            <span className={`font-bold text-stone-900 dark:text-stone-100 transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl'}`}>
               Slider
             </span>
           </Link>
@@ -127,7 +129,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-stone-300 hover:text-white transition-colors duration-200"
+                    className="text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors duration-200"
                   >
                     {link.label}
                   </button>
@@ -138,8 +140,33 @@ export default function Navbar() {
 
           {/* Desktop Auth Buttons / Profile */}
           <div className="hidden md:flex items-center gap-4 z-10">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors"
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="12" y1="1" x2="12" y2="3" />
+                  <line x1="12" y1="21" x2="12" y2="23" />
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                  <line x1="1" y1="12" x2="3" y2="12" />
+                  <line x1="21" y1="12" x2="23" y2="12" />
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+              ) : (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+              )}
+            </button>
+
             {loading ? (
-              <div className={`rounded-full bg-stone-800 animate-pulse transition-all duration-300 ${isScrolled ? 'w-8 h-8' : 'w-10 h-10'}`} />
+              <div className={`rounded-full bg-stone-200 dark:bg-stone-700 animate-pulse transition-all duration-300 ${isScrolled ? 'w-8 h-8' : 'w-10 h-10'}`} />
             ) : user ? (
               <Link
                 href="/profile"
@@ -152,7 +179,7 @@ export default function Navbar() {
               <>
                 <Link
                   href="/login"
-                  className="text-stone-300 hover:text-white transition-colors duration-200"
+                  className="text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors duration-200"
                 >
                   Sign in
                 </Link>
@@ -167,7 +194,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle Button */}
           <button
-            className="md:hidden p-2 text-stone-300 hover:text-white transition-colors"
+            className="md:hidden p-2 text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}

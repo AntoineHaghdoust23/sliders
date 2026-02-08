@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (.dark &);
+
 @theme {
   /* Colors */
   --color-burnt-orange: #C4501E;
@@ -60,6 +62,18 @@
 
 /* Base body styles */
 body {
+  background-color: var(--color-stone-50);
+  color: var(--color-stone-900);
+}
+
+html.dark body {
   background-color: var(--color-stone-950);
   color: var(--color-stone-100);
+}
+
+/* Smooth theme transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
 }

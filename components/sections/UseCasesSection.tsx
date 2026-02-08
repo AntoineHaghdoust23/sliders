@@ -64,19 +64,19 @@ export default function UseCasesSection() {
     <section
       ref={containerRef}
       id="use-cases"
-      className="min-h-screen bg-stone-950 text-white py-20 sm:py-24 lg:py-32"
+      className="min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-white py-20 sm:py-24 lg:py-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headingRef} className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Built for Every Team</h2>
-          <p className="text-stone-400 text-lg max-w-2xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-stone-900 dark:text-white">Built for Every Team</h2>
+          <p className="text-stone-600 dark:text-stone-400 text-lg max-w-2xl mx-auto">
             No matter your role, Slider helps you create presentations that make an impact.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map(useCase => (
-            <Card key={useCase.id} theme="dark" hover className="use-case-card">
+            <Card key={useCase.id} theme="light" hover className="use-case-card">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-lg bg-burnt-orange/10 flex items-center justify-center">
                   <svg
@@ -97,10 +97,10 @@ export default function UseCasesSection() {
                   <p className="text-burnt-orange text-xs uppercase tracking-wide font-medium mb-2">
                     {useCase.subtitle}
                   </p>
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-3">
                     {useCase.title}
                   </h3>
-                  <p className="text-stone-400 text-sm leading-relaxed">
+                  <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
                     {useCase.description}
                   </p>
                 </div>
