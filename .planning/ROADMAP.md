@@ -74,7 +74,7 @@ Plans:
 - [x] 03-02-PLAN.md — FeatureShowcase with GSAP ScrollTrigger pin + scrub animation and page integration
 
 ### Phase 4: Product Demo
-**Goal**: Users see animated walkthrough showing Slider sidebar in action through scroll-driven storytelling
+**Goal**: Users see animated walkthrough showing Slider sidebar in action through scroll-driven storytelling with Square-inspired bento grid layout and cursor effects
 **Depends on**: Phase 3
 **Requirements**: DEMO-01, DEMO-02, DEMO-03, ANIM-02, ANIM-03
 **Success Criteria** (what must be TRUE):
@@ -83,11 +83,11 @@ Plans:
   3. Content structure supports swapping in real screenshots later (placeholder-ready)
   4. Parallax effects work on select background elements for depth
   5. Demo content fades in as section enters viewport
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md — Demo data model, BentoCard with cursor flashlight effect, DemoFrame chrome wrapper, and ProductDemo bento grid layout
+- [ ] 04-02-PLAN.md — GSAP scroll animations (pinned sidebar walkthrough, stagger reveals, parallax) and homepage integration
 
 ### Phase 5: Skills & Use Cases
 **Goal**: Users browse Skills presets and use cases through interactive card grids with smooth reveals
@@ -129,6 +129,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-07 |
 | 2. Navigation & Hero | 3/3 | Complete | 2026-02-08 |
 | 3. Feature Showcase | 2/2 | Complete | 2026-02-08 |
-| 4. Product Demo | 0/TBD | Not started | - |
+| 4. Product Demo | 0/2 | Not started | - |
 | 5. Skills & Use Cases | 0/TBD | Not started | - |
 | 6. Final CTA & Footer | 0/TBD | Not started | - |
