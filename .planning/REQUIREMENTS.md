@@ -20,10 +20,10 @@
 
 ### Feature Showcase
 
-- [ ] **FEAT-01**: Pinned scroll section — viewport locks while user scrolls through features
-- [ ] **FEAT-02**: 3-5 feature content slides that swap within the pinned section
-- [ ] **FEAT-03**: Each feature slide has an icon/illustration and descriptive copy
-- [ ] **FEAT-04**: Smooth scrub-driven transitions between feature slides via GSAP ScrollTrigger
+- [x] **FEAT-01**: Pinned scroll section — viewport locks while user scrolls through features
+- [x] **FEAT-02**: 3-5 feature content slides that swap within the pinned section
+- [x] **FEAT-03**: Each feature slide has an icon/illustration and descriptive copy
+- [x] **FEAT-04**: Smooth scrub-driven transitions between feature slides via GSAP ScrollTrigger
 
 ### Product Demo
 
@@ -58,7 +58,7 @@
 - [ ] **ANIM-01**: Lenis smooth scroll initialized with GSAP ticker integration (3-line bridge)
 - [x] **ANIM-02**: Fade-in-on-scroll reveals for content sections
 - [ ] **ANIM-03**: Parallax effects on select background elements
-- [ ] **ANIM-04**: Pinned section with scrub-driven content swap (feature showcase)
+- [x] **ANIM-04**: Pinned section with scrub-driven content swap (feature showcase)
 - [ ] **ANIM-05**: Staggered batch reveals for card grids (Skills, Use Cases)
 - [ ] **ANIM-06**: Respects `prefers-reduced-motion` — disables/reduces animations when set
 
@@ -115,10 +115,10 @@
 | HERO-01 | Phase 2 | Complete |
 | HERO-02 | Phase 2 | Complete |
 | HERO-03 | Phase 2 | Complete |
-| FEAT-01 | Phase 3 | Pending |
-| FEAT-02 | Phase 3 | Pending |
-| FEAT-03 | Phase 3 | Pending |
-| FEAT-04 | Phase 3 | Pending |
+| FEAT-01 | Phase 3 | Complete |
+| FEAT-02 | Phase 3 | Complete |
+| FEAT-03 | Phase 3 | Complete |
+| FEAT-04 | Phase 3 | Complete |
 | DEMO-01 | Phase 4 | Pending |
 | DEMO-02 | Phase 4 | Pending |
 | DEMO-03 | Phase 4 | Pending |
@@ -135,7 +135,7 @@
 | ANIM-01 | Phase 1 | Complete |
 | ANIM-02 | Phase 2, Phase 4 | Complete |
 | ANIM-03 | Phase 4 | Pending |
-| ANIM-04 | Phase 3 | Pending |
+| ANIM-04 | Phase 3 | Complete |
 | ANIM-05 | Phase 5 | Pending |
 | ANIM-06 | Phase 1 | Complete |
 | DSGN-01 | Phase 1 | Complete |
@@ -156,4 +156,4 @@
 
 ---
 *Requirements defined: 2026-02-07*
-*Last updated: 2026-02-07 after roadmap creation with phase mappings*
+*Last updated: 2026-02-08 after Phase 3 completion*
