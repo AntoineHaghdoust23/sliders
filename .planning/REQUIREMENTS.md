@@ -27,9 +27,9 @@
 
 ### Product Demo
 
-- [ ] **DEMO-01**: Scroll-driven animated walkthrough showing the Slider sidebar in action
-- [ ] **DEMO-02**: PowerPoint chrome frame mockup wrapping the demo content
-- [ ] **DEMO-03**: Placeholder content structured to swap in real screenshots/assets later
+- [x] **DEMO-01**: Scroll-driven animated walkthrough showing the Slider sidebar in action
+- [x] **DEMO-02**: PowerPoint chrome frame mockup wrapping the demo content
+- [x] **DEMO-03**: Placeholder content structured to swap in real screenshots/assets later
 
 ### Skills Section
 
@@ -57,7 +57,7 @@
 
 - [ ] **ANIM-01**: Lenis smooth scroll initialized with GSAP ticker integration (3-line bridge)
 - [x] **ANIM-02**: Fade-in-on-scroll reveals for content sections
-- [ ] **ANIM-03**: Parallax effects on select background elements
+- [x] **ANIM-03**: Parallax effects on select background elements
 - [x] **ANIM-04**: Pinned section with scrub-driven content swap (feature showcase)
 - [ ] **ANIM-05**: Staggered batch reveals for card grids (Skills, Use Cases)
 - [ ] **ANIM-06**: Respects `prefers-reduced-motion` — disables/reduces animations when set
@@ -119,9 +119,9 @@
 | FEAT-02 | Phase 3 | Complete |
 | FEAT-03 | Phase 3 | Complete |
 | FEAT-04 | Phase 3 | Complete |
-| DEMO-01 | Phase 4 | Pending |
-| DEMO-02 | Phase 4 | Pending |
-| DEMO-03 | Phase 4 | Pending |
+| DEMO-01 | Phase 4 | Complete |
+| DEMO-02 | Phase 4 | Complete |
+| DEMO-03 | Phase 4 | Complete |
 | SKIL-01 | Phase 5 | Pending |
 | SKIL-02 | Phase 5 | Pending |
 | SKIL-03 | Phase 5 | Pending |
@@ -134,7 +134,7 @@
 | FOOT-02 | Phase 6 | Pending |
 | ANIM-01 | Phase 1 | Complete |
 | ANIM-02 | Phase 2, Phase 4 | Complete |
-| ANIM-03 | Phase 4 | Pending |
+| ANIM-03 | Phase 4 | Complete |
 | ANIM-04 | Phase 3 | Complete |
 | ANIM-05 | Phase 5 | Pending |
 | ANIM-06 | Phase 1 | Complete |
@@ -156,4 +156,4 @@
 
 ---
 *Requirements defined: 2026-02-07*
-*Last updated: 2026-02-08 after Phase 3 completion*
+*Last updated: 2026-02-08 after Phase 4 completion*

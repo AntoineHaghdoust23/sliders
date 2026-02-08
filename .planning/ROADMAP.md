@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation & Design System** - Next.js setup, Tailwind config, Lenis + GSAP integration
 - [x] **Phase 2: Navigation & Hero** - Sticky navbar and hero section with entry animations
 - [x] **Phase 3: Feature Showcase** - Pinned scroll section with scrub-driven content transitions
-- [ ] **Phase 4: Product Demo** - Scroll-driven animated sidebar walkthrough
+- [x] **Phase 4: Product Demo** - Scroll-driven animated sidebar walkthrough
 - [ ] **Phase 5: Skills & Use Cases** - Card grid sections with staggered reveals
 - [ ] **Phase 6: Final CTA & Footer** - Closing waitlist section and footer
 
@@ -86,8 +86,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Demo data model, BentoCard with cursor flashlight effect, DemoFrame chrome wrapper, and ProductDemo bento grid layout
-- [ ] 04-02-PLAN.md — GSAP scroll animations (pinned sidebar walkthrough, stagger reveals, parallax) and homepage integration
+- [x] 04-01-PLAN.md — Demo data model, BentoCard with cursor flashlight effect, DemoFrame chrome wrapper, and ProductDemo bento grid layout
+- [x] 04-02-PLAN.md — GSAP scroll animations (pinned sidebar walkthrough, stagger reveals, parallax) and homepage integration
 
 ### Phase 5: Skills & Use Cases
 **Goal**: Users browse Skills presets and use cases through interactive card grids with smooth reveals
@@ -129,6 +129,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation & Design System | 3/3 | Complete | 2026-02-07 |
 | 2. Navigation & Hero | 3/3 | Complete | 2026-02-08 |
 | 3. Feature Showcase | 2/2 | Complete | 2026-02-08 |
-| 4. Product Demo | 0/2 | Not started | - |
+| 4. Product Demo | 2/2 | Complete | 2026-02-07 |
 | 5. Skills & Use Cases | 0/TBD | Not started | - |
 | 6. Final CTA & Footer | 0/TBD | Not started | - |
