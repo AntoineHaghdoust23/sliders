@@ -25,10 +25,12 @@ export default function FeatureShowcase() {
         scrollTrigger: {
           trigger: containerRef.current,
           pin: true,
-          scrub: 1,  // Smooth scroll-linked animation
+          scrub: 0.3,  // Faster scrub for better responsiveness
           start: 'top top',
-          end: () => `+=${numSlides * 200}vh`,  // Slower: more scroll distance per slide
+          end: () => `+=${numSlides * 200}vh`,
           invalidateOnRefresh: true,
+          fastScrollEnd: true,  // Snap to end on fast scroll
+          preventOverlaps: true,
         }
       })
 

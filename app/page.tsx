@@ -1,6 +1,7 @@
 import Hero from '@/components/sections/Hero'
 import FeatureShowcase from '@/components/sections/FeatureShowcase'
 import ProductDemo from '@/components/sections/ProductDemo'
+import FeatureDeepDive from '@/components/sections/FeatureDeepDive'
 import SkillsSection from '@/components/sections/SkillsSection'
 import UseCasesSection from '@/components/sections/UseCasesSection'
 import PricingSection from '@/components/sections/PricingSection'
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <FeatureShowcase />
       <ProductDemo />
+      <FeatureDeepDive />
       <SkillsSection />
       <UseCasesSection />
       <PricingSection />

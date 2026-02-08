@@ -63,14 +63,14 @@ export default function SkillsSection() {
   return (
     <section
       ref={containerRef}
-      id="skills"
+      id="styles"
       className="min-h-screen bg-stone-100 text-stone-900 py-20 sm:py-24 lg:py-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headingRef} className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">AI-Powered Skills</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">AI-Powered Styles</h2>
           <p className="text-stone-600 text-lg max-w-2xl mx-auto">
-            Expert-crafted presets that understand your intent and deliver professional results in seconds.
+            Automatically detected from your description, or manually choose the perfect style for your presentation.
           </p>
         </div>
 

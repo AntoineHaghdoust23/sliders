@@ -1,4 +1,4 @@
-export interface Skill {
+export interface Style {
   id: string
   category: 'Sales' | 'Education' | 'Startup'
   title: string
@@ -6,7 +6,10 @@ export interface Skill {
   iconPaths: string[]
 }
 
-export const skills: Skill[] = [
+// For backwards compatibility
+export type Skill = Style
+
+export const styles: Style[] = [
   // Sales
   {
     id: 'sales-pitch',
@@ -75,12 +78,16 @@ export const skills: Skill[] = [
   }
 ]
 
-export const skillsByCategory = skills.reduce((acc, skill) => {
-  if (!acc[skill.category]) {
-    acc[skill.category] = []
+export const stylesByCategory = styles.reduce((acc, style) => {
+  if (!acc[style.category]) {
+    acc[style.category] = []
   }
-  acc[skill.category].push(skill)
+  acc[style.category].push(style)
   return acc
-}, {} as Record<string, Skill[]>)
+}, {} as Record<string, Style[]>)
+
+// For backwards compatibility
+export const skills = styles
+export const skillsByCategory = stylesByCategory
 
 export const categories = ['Sales', 'Education', 'Startup'] as const

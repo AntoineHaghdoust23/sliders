@@ -3,14 +3,16 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useLenis } from '@/hooks/useLenis'
 import Button from '@/components/ui/Button'
+import type { User } from '@supabase/supabase-js'
 
 interface MobileMenuProps {
   isOpen: boolean
   onClose: () => void
   links: { label: string; href: string }[]
+  user?: User | null
 }
 
-export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onClose, links, user }: MobileMenuProps) {
   const lenis = useLenis()
   const navRef = useRef<HTMLElement>(null)
 
@@ -52,6 +54,12 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
     onClose()
   }
 
+  // Get user initials for avatar
+  const getUserInitials = () => {
+    if (!user?.email) return '?'
+    return user.email.charAt(0).toUpperCase()
+  }
+
   if (!isOpen) return null
 
   return (
@@ -86,20 +94,38 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
             </ul>
           </nav>
 
-          {/* Auth Buttons */}
+          {/* Auth Buttons or Profile */}
           <div className="mt-6 space-y-3">
-            <Link href="/signup" onClick={onClose}>
-              <Button variant="primary" className="w-full">
-                Get Started
-              </Button>
-            </Link>
-            <Link
-              href="/login"
-              onClick={onClose}
-              className="block w-full text-center py-3 text-stone-300 hover:text-white transition-colors"
-            >
-              Sign in
-            </Link>
+            {user ? (
+              <Link
+                href="/profile"
+                onClick={onClose}
+                className="flex items-center gap-3 py-3 text-stone-300 hover:text-white transition-colors"
+              >
+                <div className="w-10 h-10 rounded-full bg-burnt-orange flex items-center justify-center text-white font-semibold">
+                  {getUserInitials()}
+                </div>
+                <div>
+                  <p className="text-white font-medium">My Profile</p>
+                  <p className="text-stone-500 text-sm truncate max-w-[180px]">{user.email}</p>
+                </div>
+              </Link>
+            ) : (
+              <>
+                <Link href="/signup" onClick={onClose}>
+                  <Button variant="primary" className="w-full">
+                    Get Started
+                  </Button>
+                </Link>
+                <Link
+                  href="/login"
+                  onClick={onClose}
+                  className="block w-full text-center py-3 text-stone-300 hover:text-white transition-colors"
+                >
+                  Sign in
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
