@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero'
+import FeatureShowcase from '@/components/sections/FeatureShowcase'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
 
@@ -7,40 +8,7 @@ export default function Home() {
     <div>
       <Hero />
 
-      {/* Features Section */}
-      <section id="features" className="min-h-screen bg-stone-50 text-stone-900 py-20 sm:py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-bold text-center mb-16">
-            Why Teams Choose Slider
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card theme="light" hover>
-              <h3 className="text-2xl font-bold text-stone-900 mb-3">
-                AI-Powered Content
-              </h3>
-              <p className="text-stone-600">
-                Generate compelling slide content, refine messaging, and get smart suggestions based on your presentation goals.
-              </p>
-            </Card>
-            <Card theme="light" hover>
-              <h3 className="text-2xl font-bold text-stone-900 mb-3">
-                Brand Consistency
-              </h3>
-              <p className="text-stone-600">
-                Maintain your brand guidelines across every slide. Slider learns your style and applies it automatically.
-              </p>
-            </Card>
-            <Card theme="light" hover>
-              <h3 className="text-2xl font-bold text-stone-900 mb-3">
-                Instant Iteration
-              </h3>
-              <p className="text-stone-600">
-                Make changes in seconds. Rearrange layouts, update themes, and refine content without manual formatting.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <FeatureShowcase />
 
       {/* Product Demo Section */}
       <section id="demo" className="min-h-screen bg-stone-900 text-white py-20 sm:py-24 lg:py-32">
