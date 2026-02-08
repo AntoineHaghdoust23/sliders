@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { useLenis } from '@/hooks/useLenis'
 import Button from '@/components/ui/Button'
 
@@ -85,10 +86,21 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
             </ul>
           </nav>
 
-          {/* CTA Button */}
-          <Button variant="primary" className="w-full mt-6">
-            Join Waitlist
-          </Button>
+          {/* Auth Buttons */}
+          <div className="mt-6 space-y-3">
+            <Link href="/signup" onClick={onClose}>
+              <Button variant="primary" className="w-full">
+                Get Started
+              </Button>
+            </Link>
+            <Link
+              href="/login"
+              onClick={onClose}
+              className="block w-full text-center py-3 text-stone-300 hover:text-white transition-colors"
+            >
+              Sign in
+            </Link>
+          </div>
         </div>
       </div>
     </>

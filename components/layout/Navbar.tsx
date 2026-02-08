@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useLenis } from '@/hooks/useLenis'
 import Button from '@/components/ui/Button'
 import MobileMenu from '@/components/layout/MobileMenu'
@@ -72,11 +73,19 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="primary" size="default">
-              Join Waitlist
-            </Button>
+          {/* Desktop Auth Buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              href="/login"
+              className="text-stone-300 hover:text-white transition-colors duration-200"
+            >
+              Sign in
+            </Link>
+            <Link href="/signup">
+              <Button variant="primary" size="default">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle Button */}

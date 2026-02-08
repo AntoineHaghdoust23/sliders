@@ -12,51 +12,20 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Links section */}
-        <div className="flex flex-wrap gap-6 mb-8">
-          {/* Social links */}
-          <div className="flex gap-6">
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stone-500 hover:text-white transition-colors text-sm"
-            >
-              Twitter/X
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stone-500 hover:text-white transition-colors text-sm"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stone-500 hover:text-white transition-colors text-sm"
-            >
-              GitHub
-            </a>
-          </div>
-
-          {/* Legal links */}
-          <div className="flex gap-6">
-            <a
-              href="/privacy"
-              className="text-stone-500 hover:text-white transition-colors text-sm"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="/terms"
-              className="text-stone-500 hover:text-white transition-colors text-sm"
-            >
-              Terms of Service
-            </a>
-          </div>
+        {/* Legal links */}
+        <div className="flex gap-6 mb-8">
+          <a
+            href="/privacy"
+            className="text-stone-500 hover:text-white transition-colors text-sm"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="/terms"
+            className="text-stone-500 hover:text-white transition-colors text-sm"
+          >
+            Terms of Service
+          </a>
         </div>
 
         {/* Copyright */}
