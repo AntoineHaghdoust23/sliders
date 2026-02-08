@@ -7,16 +7,16 @@
 
 ### Navigation
 
-- [ ] **NAV-01**: Sticky top navbar with logo, section links, and CTA button
-- [ ] **NAV-02**: Nav links smooth-scroll to corresponding page sections via Lenis
-- [ ] **NAV-03**: Mobile hamburger menu that collapses nav into slide-out/dropdown
-- [ ] **NAV-04**: Navbar background transitions from transparent to solid on scroll
+- [x] **NAV-01**: Sticky top navbar with logo, section links, and CTA button
+- [x] **NAV-02**: Nav links smooth-scroll to corresponding page sections via Lenis
+- [x] **NAV-03**: Mobile hamburger menu that collapses nav into slide-out/dropdown
+- [x] **NAV-04**: Navbar background transitions from transparent to solid on scroll
 
 ### Hero
 
-- [ ] **HERO-01**: Bold oversized headline with supporting subline copy
-- [ ] **HERO-02**: Primary CTA — email input field + "Join Waitlist" button (placeholder, no submission)
-- [ ] **HERO-03**: Hero visual — PowerPoint sidebar mockup or abstract product visual
+- [x] **HERO-01**: Bold oversized headline with supporting subline copy
+- [x] **HERO-02**: Primary CTA — email input field + "Join Waitlist" button (placeholder, no submission)
+- [x] **HERO-03**: Hero visual — PowerPoint sidebar mockup or abstract product visual
 
 ### Feature Showcase
 
@@ -56,7 +56,7 @@
 ### Scroll Animations
 
 - [ ] **ANIM-01**: Lenis smooth scroll initialized with GSAP ticker integration (3-line bridge)
-- [ ] **ANIM-02**: Fade-in-on-scroll reveals for content sections
+- [x] **ANIM-02**: Fade-in-on-scroll reveals for content sections
 - [ ] **ANIM-03**: Parallax effects on select background elements
 - [ ] **ANIM-04**: Pinned section with scrub-driven content swap (feature showcase)
 - [ ] **ANIM-05**: Staggered batch reveals for card grids (Skills, Use Cases)
@@ -108,13 +108,13 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| NAV-01 | Phase 2 | Pending |
-| NAV-02 | Phase 2 | Pending |
-| NAV-03 | Phase 2 | Pending |
-| NAV-04 | Phase 2 | Pending |
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 2 | Pending |
+| NAV-01 | Phase 2 | Complete |
+| NAV-02 | Phase 2 | Complete |
+| NAV-03 | Phase 2 | Complete |
+| NAV-04 | Phase 2 | Complete |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
+| HERO-03 | Phase 2 | Complete |
 | FEAT-01 | Phase 3 | Pending |
 | FEAT-02 | Phase 3 | Pending |
 | FEAT-03 | Phase 3 | Pending |
@@ -133,7 +133,7 @@
 | FOOT-01 | Phase 6 | Pending |
 | FOOT-02 | Phase 6 | Pending |
 | ANIM-01 | Phase 1 | Complete |
-| ANIM-02 | Phase 2, Phase 4 | Pending |
+| ANIM-02 | Phase 2, Phase 4 | Complete |
 | ANIM-03 | Phase 4 | Pending |
 | ANIM-04 | Phase 3 | Pending |
 | ANIM-05 | Phase 5 | Pending |
