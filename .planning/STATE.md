@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 3 of 6 (Feature Showcase)
-Plan: 01 of 03 in phase complete
+Plan: 02 of 03 in phase complete
 Status: In progress
-Last activity: 2026-02-08 — Completed 03-01-PLAN.md (FeatureSlide Component & Content Data)
+Last activity: 2026-02-08 — Completed 03-02-PLAN.md (FeatureShowcase with Pinned Scroll Animation)
 
-Progress: [███████░░░] 70% (7/10 plans estimated, 7 completed)
+Progress: [████████░░] 80% (8/10 plans estimated, 8 completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 3.6 min
-- Total execution time: 0.5 hours
+- Total plans completed: 8
+- Average duration: 3.1 min
+- Total execution time: 0.4 hours
 
 **By Phase:**
 
@@ -29,11 +29,11 @@ Progress: [███████░░░] 70% (7/10 plans estimated, 7 complete
 |-------|-------|-------|----------|
 | 01 Foundation & Design System | 3 | 10 min | 3.3 min |
 | 02 Navigation & Hero | 3 | 20 min | 6.7 min |
-| 03 Feature Showcase | 1 | 3 min | 3.0 min |
+| 03 Feature Showcase | 2 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 3 min, 3 min, 15 min, 2 min, 3 min
-- Trend: Consistent velocity with occasional complex integrations
+- Last 5 plans: 3 min, 15 min, 2 min, 3 min, 2 min
+- Trend: Excellent velocity on Phase 3, GSAP patterns well-established
 
 *Updated after each plan completion*
 
@@ -67,6 +67,9 @@ Recent decisions affecting current work:
 - Overlay + slide-out panel pattern for mobile menus — Standard accessible mobile navigation pattern
 - Use iconPaths array instead of JSX elements in data — Keeps featureData.ts as pure TypeScript module with no JSX dependency, cleaner separation of data from presentation
 - FeatureSlide accepts ReactNode for icon prop — Flexible composition, allows SVG rendering in parent FeatureShowcase component
+- scrub: 0.5 for scroll-linked animations — Provides slight smoothing (0.5s catch-up) for premium feel vs scrub: true which feels too direct
+- Pin container, animate children pattern for ScrollTrigger — Never animate the pinned element itself, prevents layout issues
+- Dynamic end calculation with features.length * 100vh — Responsive scroll distance, works across all screen sizes with invalidateOnRefresh: true
 
 ### Pending Todos
 
@@ -78,8 +81,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-08T01:47:13Z
-Stopped at: Completed 03-01-PLAN.md - FeatureSlide component and feature content data created. Phase 3 in progress.
+Last session: 2026-02-08T01:53:24Z
+Stopped at: Completed 03-02-PLAN.md - FeatureShowcase section with pinned scroll animation integrated into homepage. Phase 3 in progress.
 Resume file: None
 
 ## Phase Completion
@@ -118,10 +121,14 @@ Resume file: None
 
 **Phase 3 (Feature Showcase) - IN PROGRESS**
 - 03-01: FeatureSlide component and content data ✅
+- 03-02: FeatureShowcase with pinned scroll animation ✅
 
 **Deliverables:**
 - FeatureSlide presentational component with icon/title/description props
 - Feature content data module with 4 Slider value propositions
 - SVG icon paths for AI Skills, PowerPoint Integration, Instant Results, Team Ready
-- Responsive layout with reduced motion fallback classes
-- Clean TypeScript types with no compilation errors
+- FeatureShowcase section with ScrollTrigger pinning (pin: true, scrub: 0.5)
+- Horizontal slide animation driven by scroll progress
+- Dynamic end calculation based on features.length for responsive behavior
+- Reduced motion fallback with vertical stacking
+- FeatureShowcase integrated into homepage replacing static features section
