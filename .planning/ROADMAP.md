@@ -99,11 +99,11 @@ Plans:
   3. Skills cards reveal with staggered animation as they scroll into view (ScrollTrigger batch)
   4. Use case cards display with title, description, and visual/icon for each scenario
   5. Use case cards animate in with fade and stagger as section enters viewport
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
+- [ ] 05-01-PLAN.md — Skills data module and SkillsSection with category-grouped grid and ScrollTrigger.batch stagger
+- [ ] 05-02-PLAN.md — Use Cases data module, UseCasesSection with dark card grid, and homepage integration
 
 ### Phase 6: Final CTA & Footer
 **Goal**: Users reach compelling closing CTA and complete footer to finish page experience
@@ -130,5 +130,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Navigation & Hero | 3/3 | Complete | 2026-02-08 |
 | 3. Feature Showcase | 2/2 | Complete | 2026-02-08 |
 | 4. Product Demo | 2/2 | Complete | 2026-02-07 |
-| 5. Skills & Use Cases | 0/TBD | Not started | - |
+| 5. Skills & Use Cases | 0/2 | Not started | - |
 | 6. Final CTA & Footer | 0/TBD | Not started | - |
