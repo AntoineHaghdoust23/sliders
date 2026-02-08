@@ -25,22 +25,28 @@ export default function FeatureShowcase() {
         scrollTrigger: {
           trigger: containerRef.current,
           pin: true,
-          scrub: 0.5,  // Smooth scroll-linked animation
+          scrub: 1,  // Smooth scroll-linked animation
           start: 'top top',
-          end: () => `+=${numSlides * 100}vh`,  // Dynamic calculation
+          end: () => `+=${numSlides * 200}vh`,  // Slower: more scroll distance per slide
           invalidateOnRefresh: true,
         }
       })
 
-      // Animate slides horizontally
+      // Animate slides horizontally with hold between each
       // Skip first slide (index 0) — already visible at start
+      // Hold first slide
+      tl.to({}, { duration: 0.5 })
+
       features.forEach((_, index) => {
         if (index > 0) {
+          // Slide transition
           tl.to(slidesRef.current, {
             xPercent: -100 * index,
-            ease: 'none',  // Must be 'none' for scrub
+            ease: 'none',
             duration: 1
           })
+          // Hold on this slide before moving to next
+          tl.to({}, { duration: 0.5 })
         }
       })
     })
