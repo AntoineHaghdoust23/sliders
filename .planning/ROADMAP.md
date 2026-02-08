@@ -114,15 +114,15 @@ Plans:
   2. CTA contains email input and "Join Waitlist" button (placeholder, mirrors hero)
   3. Footer appears with copyright, social links, and legal links
   4. Footer styling matches dark section theme
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 06-01: TBD
+- [ ] 06-01-PLAN.md — FinalCTA section with waitlist form + scroll animation, Footer with dark theme, and homepage integration
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -131,4 +131,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Feature Showcase | 2/2 | Complete | 2026-02-08 |
 | 4. Product Demo | 2/2 | Complete | 2026-02-07 |
 | 5. Skills & Use Cases | 2/2 | Complete | 2026-02-08 |
-| 6. Final CTA & Footer | 0/TBD | Not started | - |
+| 6. Final CTA & Footer | 0/1 | Not started | - |
