@@ -11,6 +11,7 @@ export default function SignupForm() {
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [emailSent, setEmailSent] = useState(false)
+  const [accountExists, setAccountExists] = useState(false)
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -38,7 +39,16 @@ export default function SignupForm() {
     })
 
     if (error) {
-      setError(error.message)
+      // Check if user already exists
+      if (error.message.toLowerCase().includes('already registered') ||
+          error.message.toLowerCase().includes('already exists') ||
+          error.message.toLowerCase().includes('user already')) {
+        setAccountExists(true)
+        setError('An account with this email already exists.')
+      } else {
+        setAccountExists(false)
+        setError(error.message)
+      }
       setLoading(false)
       return
     }
@@ -135,6 +145,11 @@ export default function SignupForm() {
           {error && (
             <div className="text-error text-sm bg-error/10 border border-error/20 rounded-xl px-4 py-3">
               {error}
+              {accountExists && (
+                <Link href="/login" className="block mt-2 text-burnt-orange hover:text-burnt-orange-hover transition-colors font-medium">
+                  Sign in to your account →
+                </Link>
+              )}
             </div>
           )}
 
